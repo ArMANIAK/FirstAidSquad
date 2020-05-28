@@ -1,10 +1,16 @@
 import {quiz} from './quiz.js';
+let cards;
+
+let endpoint = 'getCardsAPI';
+fetch(endpoint)
+    .then(response => response.json())
+    .then(data => cards = data.slice());
+
 window.addEventListener('load', function () {
     document.querySelector('div.toggleSound').onclick = toggleSound;
     let isStarted = false;
     let maxScore = 0;
     let score;
-    let cards;
     showModal();
 
     function showModal() {
@@ -165,21 +171,15 @@ window.addEventListener('load', function () {
         }
         else {
             isStarted = true;
-            let endpoint = 'getCardsAPI';
-            fetch(endpoint)
-                .then(response => response.json())
-                .then(data => {
-                    cards = data.slice();
-                score = 0;
-                maxScore = 0;
-                document.querySelector('#game_field').style.display = 'flex';
-                shuffle(cards);
-                let navLink = document.querySelector('#startGame');
-                navLink.href = window.location.origin + '/index.php/browse';
-                navLink.onclick = backToMain;
-                navLink.innerText = "Повернутися до головної";
-                nextCard();
-            });
+            score = 0;
+            maxScore = 0;
+            document.querySelector('#game_field').style.display = 'flex';
+            shuffle(cards);
+            let navLink = document.querySelector('#startGame');
+            navLink.href = window.location.origin + '/index.php/browse';
+            navLink.onclick = backToMain;
+            navLink.innerText = "Повернутися до головної";
+            nextCard();                
         }
     }
 
