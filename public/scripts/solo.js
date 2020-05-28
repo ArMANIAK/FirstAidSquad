@@ -16,7 +16,7 @@ window.addEventListener('load', function () {
     function showModal() {
         document.querySelector('.modal_confirmation').style.display = 'block';
         document.body.style.overflow = 'hidden';
-        document.querySelector('span.dismiss').onclick = dismissModal;
+        document.querySelector('span.dismiss').onclick = turnAutoplayOff;
         document.querySelector('.turn_on').onclick = turnAutoplayOn;
         document.querySelector('.turn_off').onclick = turnAutoplayOff;
     }
