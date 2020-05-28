@@ -6,7 +6,7 @@
     <title><?php echo $title; ?></title>
 
     <link rel="stylesheet" href="<?=base_url('public/styles.css')?>">
-    <link rel="shortcut icon" href="favicon.ico" type="text/html">
+    <link rel="shortcut icon" href="<?=base_url('favicon.ico')?>" type="text/html">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
