@@ -8,33 +8,14 @@ class Browse extends CI_Controller {
 			$this->load->helper('url');
 		}
 		
-		public function index($page = 'main') {
+		public function index() {
 			
-			if ( ! file_exists(APPPATH.'/views/pages/'.$page.'.php'))
-			{
-					// Упс, у нас нет такой страницы!
-					echo APPPATH.'/views/pages/'.$page.'.php';
-			}
-
 			$data['title'] = 'Загін Першої Допомоги онлайн гра';
 
 			$this->load->view('templates/header', $data);
 			$this->load->view('templates/banner');
 			$this->load->view('templates/nav');
-			$this->load->view('pages/'.$page, $data);
+			$this->load->view('pages/main');
 			$this->load->view('templates/footer');
 		}
-		
-		public function soloMode() {
-			
-			echo APPPATH.'/views/pages/';
-
-            $data['title'] = 'Одиночна гра';
-			$this->load->model('getCards_model','',TRUE);
-            $data['questions'] = $this->getCards_model->getQuestions();
-			
-			$this->load->view('templates/header', $data);
-			$this->load->view('templates/nav');
-            $this->load->view('pages/solo');
-        }
     }
