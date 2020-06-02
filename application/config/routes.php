@@ -54,6 +54,6 @@ $route['quiz/getCardsAPI'] = 'quiz/getCardsAPI/$1';
 $route['quiz/showResults/(:any)'] = 'quiz/showResults/$maxScore/$playerScore';
 $route['quiz/(:any)'] = 'quiz/solomode/$1';
 $route['404_override'] = '';
+$route['browse/(:any)'] = 'browse';
 $route['translate_uri_dashes'] = FALSE;
 $route['default_controller'] = 'browse';
-$route['browse/(:any)'] = 'browse/index/$1';
