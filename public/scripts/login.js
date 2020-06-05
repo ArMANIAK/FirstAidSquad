@@ -1,3 +1,5 @@
+// Tab-switching
+
 let loginBtn = document.getElementById('login_btn');
 let registerBtn = document.getElementById('register_btn');
 let loginForm = document.querySelector('div.login');
@@ -19,4 +21,34 @@ function switchTabs(activeBtn, inactiveBtn, elementToHide, elementToShow) {
     activeBtn.onclick = toggleTabs;
     elementToShow.style.display = 'block';
     elementToHide.style.display = 'none';
+}
+
+// Form validation
+
+let loginSubmit = document.getElementById('loginSubmit');
+let registerSubmit = document.getElementById('registerSubmit');
+
+loginSubmit.onclick = loginValidate;
+registerSubmit.onclick = registerValidate;
+
+function loginValidate() {
+    let login = document.getElementById('loginLogin');
+    let pass = document.getElementById('loginPass');
+
+    // TO DO
+}
+
+function registerValidate() {
+    let login = document.getElementById('registerLogin');
+    let pass = document.getElementById('registerPass');
+    let passConfirm = document.getElementById('registerPassConfirmation');
+    let error_message = document.getElementById("register_error_message");
+    if (pass.value !== passConfirm.value) {
+        error_message.innerHTML = 'Ви ввели різні паролі';
+        return false;
+    }
+    else {
+        error_message.innerHTML = '';
+        return true;
+    }
 }
