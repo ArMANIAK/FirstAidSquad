@@ -50,9 +50,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['public/(:any)'] = 'public/(:any)';
-$route['quiz/getCardsAPI'] = 'quiz/getCardsAPI/$1';
+$route['quiz/getCardsAPI'] = 'quiz/getCardsAPI';
 $route['quiz/showResults/(:any)'] = 'quiz/showResults/$maxScore/$playerScore';
-$route['quiz/(:any)'] = 'quiz/solomode/$1';
+$route['quiz/(:any)'] = 'quiz/solomode';
+$route['authorize/(:any)'] = 'authorize/$1';
+
 $route['404_override'] = '';
 $route['browse/(:any)'] = 'browse';
 $route['translate_uri_dashes'] = FALSE;
