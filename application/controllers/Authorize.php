@@ -27,14 +27,14 @@ class Authorize extends CI_Controller
         public function register() 
         {
             if($_SERVER['REQUEST_METHOD'] == 'POST') {
-                $this->load->model('register_model');
-                if ($this->register_model->registerCheck($_POST['login'])) 
+                $this->load->model('auth_model');
+                if ($this->auth_model->registerCheck($_POST['login'])) 
                 {
                     $user = array(
                         'user_login' => $_POST['login'],
                         'user_pass_hash' => md5($_POST['pass'])
                     );
-                    $this->register_model->register($user);
+                    $this->auth_model->register($user);
 
                     // Log in and redirect to profile
 
