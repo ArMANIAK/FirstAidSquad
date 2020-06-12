@@ -12,7 +12,7 @@
 </div>
 <div class="form">
     <div class="login">
-        <form method="post" action="<?= base_url('index.php/login') ?>">
+        <form method="post" action="<?= base_url('index.php/authorize') ?>">
             <div id="login_error_message">
                 
             </div>
@@ -28,7 +28,7 @@
         </form>
     </div>
     <div class="register">
-        <form method="post" action="<?= base_url('index.php/login/register') ?>">
+        <form method="post" action="<?= base_url('index.php/authorize/register') ?>">
             <div id="register_error_message">
                 
             </div>

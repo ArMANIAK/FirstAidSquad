@@ -34,8 +34,19 @@ registerSubmit.onclick = registerValidate;
 function loginValidate() {
     let login = document.getElementById('loginLogin');
     let pass = document.getElementById('loginPass');
-
-    // TO DO
+    let error_message = document.getElementById('login_error_message');
+    if (!login.value) {
+        error_message.innerHTML = 'Поле "Login" не може бути пустим';
+        return false;
+    }
+    else if (!pass.value) {
+        error_message.innerHTML = 'Поле "Password" не може бути пустим';
+        return false;
+    }
+    else {
+        error_message.innerHTML = '';
+        return true;
+    }
 }
 
 function registerValidate() {

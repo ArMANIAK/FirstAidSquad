@@ -278,6 +278,57 @@ div.modal_confirmation {
                 box-shadow: 0 0 5px #000;
             }
 
+div.tabs{
+    margin: 20px 20px -1px 20px;
+    padding: 15px 15px 0px 15px;
+    display: flex;
+}
+
+    div.tab {
+        padding: 10px 20px;
+        margin-right: 5px;
+        border-radius: 5px 5px 0px 0px;
+        border-top: 1px solid rgb(218, 41, 28);
+        border-left: 1px solid rgb(218, 41, 28);
+        border-right: 1px solid rgb(218, 41, 28);
+    }
+
+    div.tab.active {
+        border-bottom: 1px solid white;
+    }
+
+div.form {
+    padding: 25px;
+    margin: 0px 25px 25px 25px;
+    border-radius: 5px;
+    border: 1px solid rgb(218, 41, 28);
+}
+
+    label {
+        display: block;
+        margin: 20px;
+    }
+
+    div.register {
+        display: none;
+    }
+
+    .submit_btn {
+        padding: 10px 20px;
+        background-color: green;
+        transition: all 0.4s;
+    }
+
+        .submit_btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 5px #000;
+        }
+
+div.error_message {
+    margin: 20px 30px;
+    color: red;
+}
+
 footer {
     position: relative;
     display: flex;
