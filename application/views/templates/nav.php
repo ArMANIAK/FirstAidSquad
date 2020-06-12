@@ -10,7 +10,7 @@
         <li><a id="startMPGame" href="<?=base_url('index.php/quiz/multiplayer')?>">Грати з іншими</a></li>
         <li><a href="<?=base_url('index.php/user')?>">Мій профіль</a></li>
         <?php else: ?>
-        <li><a href="<?=base_url('index.php/login')?>">Увійти/зареєструватися</a></li>
+        <li><a href="<?=base_url('index.php/authorize')?>">Увійти/зареєструватися</a></li>
         <?php endif; ?>
     </ul>
 </nav>
